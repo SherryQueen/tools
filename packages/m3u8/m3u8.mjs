@@ -1,9 +1,9 @@
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { isAbsolute, join, parse } from 'node:path';
 
 import fetch from 'node-fetch';
 
-import config from './config.json';
+const config = JSON.parse(readFileSync('./config.json', 'utf8'));
 
 const url = process.argv[2];
 const baseUrl = config.cdn;
