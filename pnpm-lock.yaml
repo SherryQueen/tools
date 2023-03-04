@@ -11,6 +11,12 @@ importers:
       lint-staged: 13.1.2
       prettier: 2.8.4
 
+  packages/hosts:
+    specifiers:
+      node-fetch: ^3.3.0
+    dependencies:
+      node-fetch: 3.3.0
+
   packages/m3u8:
     specifiers:
       node-fetch: ^3.3.0
