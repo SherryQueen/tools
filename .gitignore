@@ -2,4 +2,5 @@ output
 node_modules
 
 
+docker/aria2.bash
 packages/m3u8/config.json

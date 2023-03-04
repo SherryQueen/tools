@@ -1,12 +1,13 @@
 {
   "name": "root",
   "lint-staged": {
-    "*.{mjs,js,jsx,ts,tsx}": [
+    "*": [
       "prettier --write"
     ]
   },
   "scripts": {
     "prepare": "husky install",
+    "staged": "lint-staged",
     "prettier": "prettier . -w"
   },
   "dependencies": {
