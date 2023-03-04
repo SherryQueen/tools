@@ -1,6 +1,7 @@
 {
   "name": "m3u8",
   "private": true,
+  "type": "module",
   "dependencies": {
     "node-fetch": "^3.3.0"
   }
