@@ -8,7 +8,8 @@
   "scripts": {
     "prepare": "husky install",
     "staged": "lint-staged",
-    "prettier": "prettier . -w"
+    "prettier": "prettier . -w",
+    "hosts": "cd ./packages/hosts && node hosts.mjs"
   },
   "dependencies": {
     "husky": "^8.0.3",

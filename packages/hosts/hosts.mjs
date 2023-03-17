@@ -16,8 +16,6 @@ async function getGithubHosts() {
   return text;
 }
 
-getGithubHosts().then(updateHosts);
-
 const getHostPath = () => {
   if (isWin) return 'C:\\Windows\\System32\\drivers\\etc\\hosts';
   if (isApple) return '/etc/hosts';
@@ -48,3 +46,5 @@ const updateHosts = (hosts) => {
   execSync(getRefreshDnsCommand());
   console.info('Refresh over');
 };
+
+getGithubHosts().then(updateHosts);
