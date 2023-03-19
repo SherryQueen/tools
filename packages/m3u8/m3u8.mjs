@@ -8,13 +8,13 @@ const config = JSON.parse(readFileSync('./config.json', 'utf8'));
 const url = process.argv[2];
 const baseUrl = config.cdn;
 
-const content = await fetch(url).then((res) => res.text());
+const content = url ? await fetch(url).then((res) => res.text()) : readFileSync(config.output.m3u8, 'utf-8');
 const lines = content.split('\n');
 const urls = [];
 const chunks = [];
 for (const line of lines) {
   if (line.endsWith('.ts')) {
-    urls.push(baseUrl + line);
+    urls.push(line.startsWith('http') || line.startsWith('https') ? line : baseUrl + line);
 
     const pathObj = parse(line);
     const filename = pathObj.name + pathObj.ext;
