@@ -11,7 +11,7 @@ console.info('isWin: ', isWin);
 console.info('isApple: ', isApple);
 
 async function getGithubHosts() {
-  const text = await fetch('https://gitee.com/fliu2476/github-hosts/raw/main/hosts').then((res) => res.text());
+  const text = await fetch('https://gitlab.com/ineo6/hosts/-/raw/master/hosts').then((res) => res.text());
   console.info(text);
   return text;
 }
