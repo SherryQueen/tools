@@ -5,6 +5,8 @@ function download() {
 
   const name = audioAuthor.replace(audioName, audioName + '-');
 
+  console.info(`wget ${link} -O "${name}.mp3"`);
+
   fetch(link).then((res) => {
     res.blob().then((blob) => {
       const url = window.URL.createObjectURL(blob);

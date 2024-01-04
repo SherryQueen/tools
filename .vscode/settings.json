@@ -38,7 +38,7 @@
     "strings": true
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": false
+    "source.fixAll.eslint": "never"
   },
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
