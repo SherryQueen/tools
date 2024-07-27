@@ -7,6 +7,9 @@ import fetch from 'node-fetch';
 const config = JSON.parse(readFileSync('./config.json', 'utf8'));
 
 async function download(link) {
+  const u = new URL(link);
+  const baseHost = config.cdn || `${u.protocol}//${u.host}`;
+
   console.info(`download url: ${link}`);
   const content = await fetch(link).then((res) => res.text());
 
@@ -15,14 +18,21 @@ async function download(link) {
   const chunks = [];
   for (const line of lines) {
     if (line.endsWith('.ts')) {
-      urls.push(line.startsWith('http') || line.startsWith('https') ? line : baseUrl + line);
+      if (line.startsWith('http') || line.startsWith('https')) {
+        urls.push(line);
+      } else if (!line.includes('/')) {
+        let p = u.pathname;
+        p = p.slice(0, p.lastIndexOf('/'));
+        urls.push(baseHost + p + '/' + line);
+      } else {
+        urls.push(baseHost + line);
+      }
 
       const pathObj = parse(line);
       const filename = pathObj.name + pathObj.ext;
       chunks.push(filename);
     } else if (line.endsWith('.m3u8')) {
-      const u = new URL(link);
-      const url = `${u.protocol}//${u.host}${line}`;
+      const url = baseHost + line;
       console.info(`identify the url: ${url}`);
       download(url);
       return;
