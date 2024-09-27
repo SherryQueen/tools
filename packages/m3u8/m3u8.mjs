@@ -11,13 +11,17 @@ async function download(link) {
   const baseHost = config.cdn || `${u.protocol}//${u.host}`;
 
   console.info(`download url: ${link}`);
-  const content = await fetch(link).then((res) => res.text());
+  const content = await fetch(link, {
+    redirect: 'follow',
+    headers: { Referer: `https://${u.hostname}/` },
+  }).then((res) => res.text());
+  // console.info('----- content', content);
 
   const lines = content.split('\n');
   const urls = [];
   const chunks = [];
   for (const line of lines) {
-    if (line.endsWith('.ts')) {
+    if (['.ts', '.jpeg'].some((suffix) => line.endsWith(suffix))) {
       if (line.startsWith('http') || line.startsWith('https')) {
         urls.push(line);
       } else if (!line.includes('/')) {
@@ -36,6 +40,18 @@ async function download(link) {
       console.info(`identify the url: ${url}`);
       download(url);
       return;
+    } else if (/URI=\"(.*.key)\"/.test(line)) {
+      const m = /URI=\"(.*.key)\"/.exec(line);
+      if (m) {
+        const url = m[1];
+        const key = url.slice(url.lastIndexOf('/') + 1);
+        console.info(url);
+        console.info(`identify the key: ${key}`);
+        urls.push(url);
+        chunks.push(line.replace(url, key));
+      } else {
+        console.info('------- error', url);
+      }
     } else chunks.push(line);
   }
 
