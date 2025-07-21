@@ -1,0 +1,151 @@
+{
+  "search.followSymlinks": false,
+  "window.titleBarStyle": "native",
+  "workbench.editor.decorations.badges": true,
+  "workbench.editor.decorations.colors": true,
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "'Monaspace Radon', 'Cascadia Code', 'Fira Code','Monaco','Jetbrains mono','Source Han Sans CN'",
+  "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",
+  "editor.inlayHints.fontFamily": "'Cascadia Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 16,
+  "editor.suggestFontSize": 16,
+  "editor.roundedSelection": false,
+  "editor.tabSize": 2,
+  "editor.cursorStyle": "line",
+  "editor.lineHeight": 24,
+  "editor.wordWrap": "on",
+  "editor.detectIndentation": false,
+  "editor.wordWrapColumn": 120,
+  "editor.suggestSelection": "first",
+  "editor.semanticHighlighting.enabled": false,
+  "editor.suggest.preview": true,
+  "editor.tabCompletion": "on",
+  "editor.renderWhitespace": "all",
+  "editor.minimap.renderCharacters": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "phase",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "never"
+  },
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.wpy": "vue",
+    "*.ttss": "css",
+    "*.ttml": "html",
+    "*.json": "jsonc",
+    "*.snap": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.syntaxProfiles": {
+    "vue-html": "html",
+    "vue": "html"
+  },
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorBlinking": true,
+  "debug.console.fontFamily": "'Monaspace Radon', 'Cascadia Mono', 'Source Han Sans CN'",
+  "git.confirmSync": false,
+  "html.format.indentInnerHtml": true,
+  "prettier.semi": true,
+  "prettier.printWidth": 120,
+  "prettier.singleQuote": true,
+  "prettier.quoteProps": "as-needed",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "eslint.debug": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "css.lint.duplicateProperties": "error",
+  "less.lint.duplicateProperties": "error",
+  "scss.lint.duplicateProperties": "error",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.inlayHints.parameterTypes.enabled": false,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": false,
+  "javascript.inlayHints.variableTypes.enabled": false,
+  "typescript.inlayHints.enumMemberValues.enabled": false,
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": false,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": false,
+  "typescript.inlayHints.variableTypes.enabled": false,
+  "github.gitAuthentication": false,
+  "cSpell.diagnosticLevel": "Error",
+  "npm.packageManager": "pnpm",
+  "files.eol": "\n",
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "yaml.maxItemsComputed": 50000,
+  "cSpell.userWords": [
+    "esbuild",
+    "execa",
+    "pnpm"
+  ],
+  "redhat.telemetry.enabled": true,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.editor.enablePreview": false,
+  "svg.preview.mode": "svg",
+  "window.customTitleBarVisibility": "never",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "code-runner.runInTerminal": true,
+  "workbench.colorTheme": "Light",
+  "gitblame.inlineMessageEnabled": true,
+  "gitblame.inlineMessageFormat": "${author.name}, (${time.ago}) · ${commit.summary}",
+  "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
+  "git.blame.statusBarItem.enabled": false
+}
